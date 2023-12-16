@@ -64,9 +64,22 @@
       </fieldset>
       <fieldset>
       <div class="sub-title">お荷物情報</div>
+      <div class="form-group">
+        <label for="box">段ボールの個数</label>
+        <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
+      </div>
         <div class="form-group">
-          <label for="box">段ボールの個数</label>
-          <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
+          <label for="month">時期</label>
+          <select name="example">
+            <option>選択肢のサンプル1</option>
+            <option>選択肢のサンプル2</option>
+            <option>選択肢のサンプル3</option>
+            </select>
+            
+            <!--
+          <input type="text" id="month" name="month" th:field="*{month}" class="form-control" value="10"/>
+          -->
+
         </div>
         <div class="form-group">
           <label for="bed">ベッドの個数</label>
