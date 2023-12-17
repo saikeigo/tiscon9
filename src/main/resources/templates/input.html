@@ -56,10 +56,19 @@
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
-        <div class="form-group">
+         <div class="form-group">
           <label for="newAddress">お届け先住所（市区町村以下）</label>
           <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control" required="required"
                  value="札幌市南区1"/>
+        </div>
+        
+        <div class="form-group">
+          <label for="monthMove">引っ越し月</label>
+          <select id="monthMove" name="monthMove" class="form-control" th:field="*{monthMove}">
+            <option th:value="3-4月" th:text="3-4月">3-4月</option>
+            <option th:value="9月" th:text="9月">9月</option>
+            <option th:value="その他" th:text="その他">その他</option>
+          </select>
         </div>
       </fieldset>
       <fieldset>
