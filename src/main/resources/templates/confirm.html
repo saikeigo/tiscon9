@@ -86,8 +86,8 @@
         </tr>
         <tr>
           <th>引っ越し月</th>
-          <td><span th:text="*{monthMove} ? '3,4月' : '9月': 'その他'"></span></td>
-          <input type="monthMove" name="monthMove" id="monthMove" th:value="*{monthMove}"/>
+          <td><span th:text="*{monthMove}"></span></td>
+          <input type="hidden" name="monthMove" id="monthMove" th:value="*{monthMove}"/>
         </tr>
         </tbody>
       </table>
