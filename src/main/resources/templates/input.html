@@ -73,25 +73,30 @@
       </fieldset>
       <fieldset>
       <div class="sub-title">お荷物情報</div>
+      　<div class="form-group">
+        <label for="exapleprice">ダンボール数80個 → 30000円 (2tトラック)、ダンボール数200個 → 50000円 (4tトラック)※距離や季節によって値段が</label>
+        <label for="exapleprice">（例1）ダンボール数20個、ベッド1台、洗濯機1台、自転車2台 → ダンボール80個換算 → 2tトラック</label>
+        <label for="exapleprice">（例2）ダンボール数100個、ベッド2台、洗濯機1台、自転車2台 → ダンボール180個換算 → 4tトラック</label>
+        <br><br />
         <div class="form-group">
           <label for="box">段ボールの個数（半角）(縦50cm，横35cm，奥行き35cm)</label>
           <input type="number" min="0" id="box" name="box" th:field="*{box}" class="form-control" value="10" required="required"/>
         </div>
         <div class="form-group">
-          <label for="bed">ベッドの個数（半角）※段ボール20個分</label>
+          <label for="bed">ベッドの個数（半角）1台あたり段ボール20個換算</label>
           <input type="number" min="0" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3" required="required"/>
         </div>
         <div class="form-group">
-          <label for="bicycle">自転車の個数（半角）※段ボール15個分</label>
+          <label for="bicycle">自転車の個数（半角）1台あたり段ボール15個換算</label>
           <input type="number" min="0" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1" required="required"/>
         </div>
         <div class="form-group">
-          <label for="washingMachine">洗濯機の個数（半角）※段ボール10個分</label>
+          <label for="washingMachine">洗濯機の個数（半角）1台あたり段ボール10個換算</label>
           <input type="number" min="0" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control" required="required"
                  value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachineInstallation">洗濯機の設置工事申し込み（＋3000円）</label>
+          <label for="washingMachineInstallation">洗濯機の設置工事申し込み（オプション代金＋3000円）</label>
           <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
